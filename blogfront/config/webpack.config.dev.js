@@ -259,32 +259,32 @@ module.exports = {
   performance: {
     hints: false,
   },
-  {
-    exclude: [
-    /\.html$/,
-    /\.(js|jsx)$/,
-    /\.(css|less)$/,
-    /\.json$/,
-    /\.bmp$/,
-    /\.gif$/,
-    /\.jpe?g$/,
-    /\.png$/,
-    ],
-    loader: require.resolve('file-loader'),
-    options: {
-      name: 'static/media/[name].[hash:8].[ext]',
-    },
+},
+{
+  exclude: [
+  /\.html$/,
+  /\.(js|jsx)$/,
+  /\.(css|less)$/,
+  /\.json$/,
+  /\.bmp$/,
+  /\.gif$/,
+  /\.jpe?g$/,
+  /\.png$/,
+  ],
+  loader: require.resolve('file-loader'),
+  options: {
+    name: 'static/media/[name].[hash:8].[ext]',
   },
-  // ** STOP ** Are you adding a new loader?
-  // Remember to add the new extension(s) to the "file" loader exclusion list.
-  {
-   test: /\.less$/,
-   use: [
-     'style-loader',
-     'css-loader',
-     'less-loader',
-   ]
- },
+},
+// ** STOP ** Are you adding a new loader?
+// Remember to add the new extension(s) to the "file" loader exclusion list.
+{
+ test: /\.less$/,
+ use: [
+   'style-loader',
+   'css-loader',
+   'less-loader',
+ ]
 };
 /*
       */

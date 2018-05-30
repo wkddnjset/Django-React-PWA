@@ -28,8 +28,7 @@ urlpatterns = [
                                  content_type='application/javascript'), name='service-worker_js'),
     # login, logout 등 사용,
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    # /blog/이나 /home/ url로 바로 접근하더라도 장고가 index.html 로 보내줄 수 있게 추가
-    url(r'^(home)|(blog)/', TemplateView.as_view(template_name='index.html'), name='route'),
+
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
